@@ -1,0 +1,671 @@
+const profileData = {
+  name: "Ashish Gupta",
+  roleLine: "Cyber Security Student | Aspiring Ethical Hacker | AI & Security Enthusiast",
+  greeting: "Hey, I'm ",
+  promptPlaceholder: "Ask me anything about my work...",
+  socialLinks: {
+    linkedin: "https://www.linkedin.com/in/ashish-gupta-037973259/",
+    email: "agupta38160@gmail.com",
+    github: "https://github.com/bitcodeAShishcloud",
+    whatsapp: "https://wa.me/918303511792"
+  },
+  sections: [
+    { label: "About", icon: "smile", href: "#about" },
+    { label: "Education", icon: "book-open", href: "#education" },
+    { label: "Projects", icon: "briefcase", href: "#projects" },
+    { label: "Skills", icon: "layers", href: "#skills" },
+    { label: "Contact", icon: "user", href: "#contact" },
+    { label: "Location", icon: "map-pin", href: "#location" }
+  ],
+  cards: {
+    about: {
+      title: "About Me",
+      text: "B.Tech CSE (Cyber Security) student at NIET Greater Noida. Passionate about ethical hacking, AI-driven security solutions, and building real-world projects. Strong believer in 'learning by building' - actively exploring the intersection of AI + Cyber Security through hands-on labs, simulations, and open-source contributions." 
+    },
+    education: {
+      title: "Education",
+      text: "B.Tech Computer Science (Cyber Security), Noida Institute of Engineering & Technology, Greater Noida (Sep 2024 - Dec 2028). Specialized training in network security, ethical hacking fundamentals, web application security, and AI integration."
+    },
+    projects: {
+      title: "Projects",
+      text: "Poppit AI - Full-stack open-source AI chat application (Oct 2025 - Feb 2026) using FastAPI, Hugging Face Transformers, PEFT, and local LLM inference. Built intelligent conversational AI with privacy-focused local deployment. Completed AIG Shields Up Cybersecurity Job Simulation and Advent of Cyber 2025 challenge. <br><a href='https://github.com/bitcodeAShishcloud/poppit-ai' target='_blank'>View Project on GitHub</a>  <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>Explore all my projects on GitHub</a>"
+    },
+    skills: {
+      title: "Skills",
+      text: "<strong>Cyber Security:</strong><br> Web App Security, Network Defense, Vulnerability Analysis, Ethical Hacking. <br><strong>Tools:</strong><br> Burp Suite, Kali Linux, Git/GitHub. <br><strong>AI/ML:</strong><br> Python, FastAPI, Hugging Face Transformers, PEFT, Local LLM deployment. Strong focus on SOC operations, penetration testing, and AI-driven security."
+    },
+    contact: {
+      title: "Contact",
+      text: "For collaboration, security research, or networking opportunities — feel free to reach out. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Visit my LinkedIn</a> or <a href='mailto:agupta38160@gmail.com'>send me an email</a> <br><a href='https://wa.me/918303511792' target='_blank'>WhatsApp</a> | <a href='https://github.com/bitcodeAShishcloud' target='_blank'>GitHub</a>"
+    },
+    location: {
+      title: "Location",
+      text: "New Delhi, India · Open to remote opportunities in Web Development, Penetration Testing, SOC Analysis, and AI Engineering. Passionate about AI + Cyber Security integration."
+    },
+    whyHire: {
+      title: "Why Hire Me?",
+      text: "I combine cybersecurity fundamentals with hands-on AI engineering. I don't just learn tools—I build real systems, simulate real SOC workflows, and open-source my work. Proven track record: Poppit AI (full-stack deployment), AIG job simulation (hands-on SOC), Advent of Cyber 2025 (real-world challenges). I bring both technical depth and the drive to contribute meaningfully from day one."
+    }
+  },
+  image: {
+    src: "assets/Ashish.jpg",
+    alt: "Profile photo"
+  },
+  suggestions: [
+    { label: "Summary", iconType: "user", prompt: "all" },
+    { label: "Projects", iconType: "briefcase", prompt: "projects" },
+    { label: "Skills", iconType: "layers", prompt: "skills" },
+    { label: "Education", iconType: "book", prompt: "education" },
+    { label: "Contact", iconType: "mail", prompt: "contact" },
+    { label: "Location", iconType: "pin", prompt: "location" },
+    { label: "Resume", iconType: "file-text", prompt: "resume" },
+    { label: "Why Hire You?", iconType: "star", prompt: "why hire you" }
+  ],
+  qa: [
+    {
+      keywords: ["hi","name", "hello", "hey", "greetings"],
+      answers: [
+        "Hey there! 👋 I'm Ashish. Ask me about my projects, skills, or cyber security work!",
+        "Hi! I'm Ashish Gupta - Cyber Security student, AI builder, and ethical hacking enthusiast. What interests you?",
+        "Hello! Welcome to my portfolio. Let's dive into security, AI, or whatever's on your mind.",
+        "Hey! 😊 I'm Ashish. How can I help you today?",
+        "Greetings! I'm passionate about cyber security and AI. What would you like to explore?",
+        "Welcome! I'm Ashish, combining security fundamentals with AI engineering. What brings you here?",
+        "Hey there! 👋 Always excited to chat about projects, code, security, or tech in general.",
+        "Hi! I build AI systems with security-first thinking. Feel free to ask me anything.",
+        "Hello! I'm here to share my journey in cybersecurity and AI. What catches your curiosity?",
+        "Hey! 🔒 From Kali Linux labs to Hugging Face models—I've got stories to share.",
+        "Greetings! I'm Ashish, and I believe in learning by building real things. Ask away!",
+        "Hi there! Security enthusiast by day, AI engineer by passion. What can I tell you?",
+        "Welcome aboard! I'm a B.Tech student building things at the intersection of security and AI.",
+        "Hey! 💡 Real projects, real simulations, real commitment. Let's talk about it.",
+        "Hello! I don't just study security—I practice it, build on it, and share it. Curious about anything?",
+        "Hi! Ashish here. Whether it's penetration testing or model fine-tuning, I'm all ears to discuss.",
+        "Greetings, friend! 🚀 I'm here to tell you about my journey and answer your questions.",
+        "Hey! I'm Ashish. Let me share my experiences in cyber security, AI, and building cool projects.",
+        "Welcome! I combine theoretical knowledge with hands-on projects. What would you like to know?",
+        "Hi there! 🎯 Passionate about security. Driven by AI. Let's connect!",
+        "Hello! I'm excited to tell you about my work, skills, and the projects I've built.",
+        "Hey! I'm a builder first, a student second. Ask me anything about my journey!"
+      ]
+    },
+    {
+      keywords: ["who", "you", "about", "yourself", "me"],
+      answers: [
+        "I'm Ashish Gupta - a B.Tech CSE (Cyber Security) student at NIET Greater Noida, aspiring ethical hacker, and AI & Security enthusiast.",
+        "I'm a Cyber Security student passionate about ethical hacking, network defense, AI-driven security solutions, and building real-world projects.",
+        "I'm Ashish - combining cyber security expertise with AI development. Strong believer in 'learning by building' through hands-on labs and open-source work.",
+        "I'm a cyber security student with hands-on experience in web app security, SOC workflows, threat analysis, and AI chatbot development using local LLMs.",
+        "I'm an aspiring ethical hacker focused on web application security, network defense, and actively exploring the intersection of AI + Cyber Security.",
+        "I'm a passionate learner combining cybersecurity fundamentals with AI engineering - working on privacy-first AI systems and real-world security projects.",
+        "I'm a security-minded developer building intelligent applications, completing industry simulations, and contributing to the open-source community."
+      ]
+    },
+    {
+      keywords: ["education", "study", "college", "university", "niet", "degree"],
+      answers: [
+        "🎓 My Current Path: B.Tech in Computer Science (Cyber Security) at Noida Institute of Engineering & Technology, Greater Noida (Sep 2024 - Dec 2028).",
+        "Institution: NIET, Greater Noida | Degree: B.Tech Computer Science | Specialization: Cyber Security | Timeline: Sep 2024 - Dec 2028 | Focus: Ethical hacking, network defense, AI security.",
+        "My educational background: B.Tech in Computer Science (Cyber Security) from NIET, gaining advanced knowledge in network security, penetration testing, and AI systems.",
+        "Education Philosophy: NIET provides the theory. I provide the execution. Real projects, industry simulations, and hands-on labs complement classroom learning.",
+        "The NIET Advantage: Studying at a college that emphasizes cyber security specialization means network security fundamentals, ethical hacking labs, threat analysis methodology, and modern AI tool integration.",
+        "I'm at Noida Institute of Engineering & Technology pursuing Computer Science with Cyber Security specialization (2024-2028), actively learning through hands-on labs and projects.",
+        "My Approach to College: Theory + Practice = Mastery. I take academics seriously, but I don't stop at exams. I build projects, complete simulations, contribute to open-source.",
+        "NIET Greater Noida Journey: B.Tech in CS (Cyber Security) with Coursework in network security, ethical hacking, threat analysis, and Personal projects like Poppit AI and security labs.",
+        "Studying B.Tech CS (Cyber Security) at NIET means I have formal training in security principles, but my real education happens outside classrooms through building, failing, and learning.",
+        "College Timeline & Vision: 2024-2028 B.Tech in Cyber Security. Goal: Not just pass exams, but become a competent security engineer by graduation.",
+        "Why Cyber Security Specialization? Because the world needs secure systems. Security + AI is where real innovation happens. NIET lets me specialize in security while pursuing AI passion.",
+        "Beyond the Curriculum: NIET provides structure. I provide ambition through extra certifications (Google, Forage, TryHackMe), open-source contributions, and full-stack project shipping.",
+        "My Definition of Education: It's not just about degrees. It's about developing judgment, building skills, and contributing to your field. College is one tool. Projects are another.",
+        "NIET + My Projects: College teaches security fundamentals. Building Poppit AI taught me how to ship. Completing AIG taught me real-world SOC workflows. Both matter equally.",
+        "The College Experience: Pursuing B.Tech at NIET while actively building full-stack applications, completing industry simulations, contributing to GitHub, and earning certifications.",
+        "Education as Foundation: NIET's cyber security program gives me solid theoretical knowledge, access to labs and resources, peer community, and credential significance. But execution is up to me.",
+        "My Student Philosophy: Don't just attend classes. Master concepts. Build projects. Contribute to community. That's how you turn a degree into actual expertise.",
+        "Specialization Matters: Cyber Security (not just generic CS) means my curriculum emphasizes vulnerability assessment, penetration testing, security architecture, and threat modeling.",
+        "Timeline Advantage: Starting my degree in 2024, I'm graduating in 2028 with 4 years of formal education, 4+ years of independent projects, and industry experience through simulations.",
+        "Not Just School, Not Just Self-Taught: I'm doing both simultaneously. NIET provides rigor. My projects provide relevance. Together, that's a powerful combination.",
+        "Why This Matters: Education at NIET gives me credibility. Projects and contributions give me capability. When I graduate, I won't be just theoretically trained—I'll be battle-tested."
+      ]
+    },
+    {
+      keywords: ["experience", "internship", "work", "job", "trainee", "aig"],
+      answers: [
+        "AIG – Shields Up: Cybersecurity Job Simulation (Forage, July 2025) - Virtual internship with hands-on exposure to real-world cybersecurity workflows.",
+        "I completed the AIG Shields Up simulation gaining practical experience in threat analysis, security incident response, risk mitigation, and SOC analyst responsibilities.",
+        "My experience includes the AIG job simulation for enterprise security, plus self-driven projects in web app security testing, network defense, and ethical hacking labs with Kali Linux.",
+        "Worked on simulated SOC analyst responsibilities in enterprise environments through AIG Shields Up, plus building AI-powered security tools and chatbot systems.",
+        "Virtual internship experience: AIG Shields Up Cybersecurity Job Simulation. Also completed Advent of Cyber 2025 and built Poppit AI - a full-stack chatbot application.",
+        "Practical experience through industry simulations (AIG), hands-on cybersecurity labs, threat analysis projects, and building AI applications with FastAPI and Hugging Face.",
+        "Experience gained from real-world threat analysis during AIG simulation. Learned how organizations identify, classify, and respond to security incidents in production environments.",
+        "My hands-on experience spans multiple domains: SOC workflows (AIG), bug bounty mindset (Advent of Cyber), and full-stack development (Poppit AI). Real problems, real solutions.",
+        "Enterprise security thinking through AIG simulation. Understood corporate risk models, incident response procedures, compliance considerations, and stakeholder communication.",
+        "Not just classroom learning—I've completed industry-standard simulations that replicate real SOC workflows. That's genuine experience with authentic security decision-making.",
+        "Experience building security tools with Python. Automated testing scripts, vulnerability scanning integrations, threat data analysis, and real-world deployment thinking.",
+        "Virtual internship at AIG exposed me to SOC operations, security incident classification, threat hunting basics, and how enterprises manage security at scale.",
+        "I've worked on real security challenges: AIG Shields Up (SOC decisions), Advent of Cyber (penetration testing), and building production AI systems (Poppit AI).",
+        "Experience tells me what theory doesn't: security is about trade-offs. Cost vs. coverage. Speed vs. thoroughness. I learned this through simulations and real projects.",
+        "My experience portfolio: 3-month AIG simulation, 30-day Advent of Cyber challenges, 5-month Poppit AI development. Consistent, progressive skill accumulation.",
+        "Gained experience in threat landscape analysis, vulnerability prioritization, incident response procedures, and how security teams actually operate under pressure.",
+        "Experience working with security tools in realistic scenarios (Burp Suite on real web apps, Kali Linux in lab environments), not just theoretical knowledge.",
+        "Understanding enterprise security operations through AIG. Learned how threat intelligence feeds into SOC dashboards, how alerts are triaged, how incidents are escalated.",
+        "Real hands-on experience doesn't come from courses—it comes from completing simulations, building projects, and iterating on feedback. That's my foundation.",
+        "Experience tells me security is both technical and human. Technical skills matter. But communication, documentation, and teamwork? Equally critical. I practice all three."
+      ]
+    },
+    {
+      keywords: ["project", "built", "created", "developed", "poppit"],
+      answers: [
+        "Poppit AI - Full-stack open-source AI chat application (Oct 2025 - Feb 2026). Tech: FastAPI, Python, Hugging Face Transformers, PEFT, Local LLM Inference. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>View all my projects on GitHub</a>",
+        "Built an intelligent conversational AI system from scratch - integrated local LLM inference for privacy-focused AI usage and implemented model fine-tuning workflows. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>Explore my GitHub repositories</a>",
+        "Key project: Poppit AI demonstrates real-world AI + backend engineering skills with deployment pipelines, fine-tuning workflows, and privacy-first local AI deployment. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>Check out my GitHub</a>",
+        "My projects include: Poppit AI (open-source chatbot with local inference), vulnerability labs, network defense systems, and completing Advent of Cyber 2025 challenges. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>See more on GitHub</a>",
+        "Built and open-sourced Poppit AI showcasing FastAPI backend development, Hugging Face integration, PEFT fine-tuning, and local model deployment for privacy. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>My GitHub repositories</a>",
+        "Project portfolio: Poppit AI (full-stack AI chatbot), cybersecurity labs, penetration testing exercises, and hands-on learning through TryHackMe and simulation platforms. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>Visit my GitHub profile</a>"
+      ]
+    },
+    {
+      keywords: ["poppit", "ai", "chatbot", "llm", "hugging face"],
+      answers: [
+        "Poppit AI is my full-stack open-source chat application built with FastAPI, Python, Hugging Face Transformers, PEFT, and local LLM inference - privacy-focused and runs offline.",
+        "I developed Poppit AI (Oct 2025 - Feb 2026) as an intelligent conversational AI system from scratch, implementing fine-tuning workflows, deployment pipelines, and local model inference.",
+        "Poppit AI showcases real-world AI + backend engineering: integrated local LLM inference for privacy, built FastAPI backend, used PEFT for parameter-efficient fine-tuning.",
+        "The project demonstrates my skills in Hugging Face Transformers, local AI model deployment, FastAPI development, and building privacy-first intelligent systems.",
+        "Built Poppit AI to explore AI engineering practically - model fine-tuning workflows, prompt handling, backend API development, and documenting for open-source contribution.",
+        "Architecture of Poppit AI: User interfaceconnects to FastAPI backend. Backend manages fine-tuned LLM models. Models run locally using quantized transformers. No cloud dependency.",
+        "Why I built Poppit AI: To prove you don't need cloud APIs for intelligent chatbots. Local inference = privacy. Quantization optimization = efficiency. Open-source = community benefit.",
+        "Poppit AI taught me real-world constraints: model size vs. speed tradeoffs, memory optimization for local deployment, prompt engineering for better outputs, user experience design.",
+        "The full-stack nature of Poppit AI—from model selection to FastAPI serving to deployment optimization—shows I can own end-to-end AI projects, not just parts.",
+        "Poppit AI's open-source release shows my commitment to knowledge sharing. Full documentation, runnable examples, architecture diagrams—helping others replicate and build on it.",
+        "Technical depth in Poppit AI: Handled async operations in FastAPI, integrated transformer models into APIs, implemented PEFT fine-tuning workflows, optimized for inference speed.",
+        "Poppit AI solved real problems companies face: need intelligent systems but can't send data to cloud. Local, private, controllable AI—that's the future I'm building.",
+        "Privacy-first philosophy in Poppit AI: All data stays local. No API calls. No cloud costs. No terms of service violations. That's responsible AI engineering.",
+        "Model selection for Poppit AI wasn't trivial: compared open-source models, evaluated performance on limited hardware, optimized for speed vs. quality tradeoffs.",
+        "Poppit AI deployment experience: Setting up project structure, managing dependencies, containerization thinking, making it reproducible for others. Not just code, but production mindset.",
+        "From concept to deployment: Poppit AI shows I can take an idea, validate it with research, architect a solution, implement it, test it, and ship it. Full ownership.",
+        "Poppit AI isn't just my project—it's proof I understand the intersection of AI and practical engineering. Theory meets real-world constraints daily.",
+        "Learning from Poppit AI: User feedback matters more than personal assumptions. Iterating based on real usage patterns beats theorizing in isolation.",
+        "Open-sourcing Poppit AI could've been risky—sharing knowledge, code, approaches. But that's the philosophy: good ideas deserve amplification, not gatekeeping.",
+        "Poppit AI's codebase is audit-ready: clean code, good documentation, comprehensive comments. This isn't throwaway code—it's professional, maintainable, production-grade."
+      ]
+    },
+    {
+      keywords: ["certification", "certified", "certificate", "course", "completed"],
+      answers: [
+        "Certifications: The Bits and Bytes of Computer Networking (Google, Nov 2025), AIG Shields Up: Cybersecurity Job Simulation (Forage, Jul 2025), Advent of Cyber 2025 (TryHackMe).",
+        "I've completed: Google's Computer Networking certification, AIG Shields Up Cybersecurity Job Simulation, Advent of Cyber 2025, plus hands-on Kali Linux labs.",
+        "My certifications demonstrate both theoretical knowledge and practical skills: Google Networking (Nov 2025), AIG Cybersecurity Simulation (Jul 2025), TryHackMe challenges.",
+        "Certified in networking fundamentals (Google), cybersecurity workflows (AIG/Forage), and completed real-world security challenges (Advent of Cyber 2025, TryHackMe).",
+        "Professional certifications: Google - The Bits and Bytes of Computer Networking, Forage - AIG Shields Up Simulation, TryHackMe - Advent of Cyber 2025.",
+        "Google Certification value: Networking is foundational for security. Understanding TCP/IP, DNS, routing, and protocols deeply matters for any security professional. Formalized through Google.",
+        "AIG Certification represents: Real scenario decision-making in enterprise security. Not just memorization—applying judgment, prioritizing threats, communicating findings to stakeholders.",
+        "Advent of Cyber 2025 completion: 30+ days of progressive security challenges. Each day builds on previous knowledge. Proves commitment to continuous learning and challenge completion.",
+        "Certifications are credentials, not mastery: They validate I've met standards. GitHub projects and shipped code prove mastery. I have both.",
+        "Why these specific certifications? Each fills a gap: Google for networking depth, AIG for enterprise security thinking, TryHackMe for competitive problem-solving skills.",
+        "Certified in areas that matter: Network fundamentals (foundation), SOC workflows (enterprise reality), penetration testing (practical security). Strategic certification choices.",
+        "Certification journey shows progression: Started with foundational networking (Google), moved to enterprise workflows (AIG), then applied in cutting-edge challenges (Advent of Cyber).",
+        "Beyond passing exams: Each certification involved real learning—networking protocols actually matter for security careers, SOC thinking changes how you evaluate threats, penetration testing is harder than it looks.",
+        "Publicly verifiable certifications: You can verify them. Google, Forage, TryHackMe all maintain registry verification. Trust, but verify. My credentials stand up.",
+        "Investment in certifications shows: I take my career seriously. These aren't free—they require time, money, effort. That's genuine commitment, not casual interest.",
+        "Certification balance: Mix of foundational (Google), simulation-based (AIG), and challenge-based (TryHackMe). Covers breadth and depth simultaneously.",
+        "What certifications don't show: Day-to-day work ethic, collaboration skills, communication ability, creativity problem-solving. For that, see my GitHub and projects.",
+        "Planning next certifications: Security+ (industry standard), CEH (ethical hacking credentials), AWS security (cloud infrastructure). Always progressing.",
+        "Certifications as learning path: Each one structured the learning journey intentionally. Not random collection—strategic progression building expertise.",
+        "Real-world validation: Multiple certification bodies (Google, Forage, TryHackMe) validate similar skills. Independent validation across reputable sources."
+      ]
+    },
+    {
+      keywords: ["skill", "technology", "tech", "tools", "know"],
+      answers: [
+        "🛡️ Security Arsenal: High Proficiency in Burp Suite, Kali Linux, Linux CLI, network fundamentals. Intermediate in penetration testing, vulnerability assessment. Understanding of SOC workflows, threat analysis, incident response.",
+        "🤖 AI/ML Stack: Framework Expertise in Hugging Face Transformers, PEFT (Parameter-Efficient Fine-Tuning). Development in local LLM inference, model fine-tuning, FastAPI integration. Concept Understanding of LLM architecture, transfer learning, deployment optimization.",
+        "💻 Programming Skills: Primary Language is Python (extensive). Backend includes FastAPI, REST APIs, microservices thinking. Tools include Git/GitHub, Linux environment, version control workflows.",
+        "Skill Pyramid (Bottom to Top): Foundation with Python, Linux, Git. Security Layer with Burp Suite, Kali Linux, web app testing. AI Layer with Hugging Face, FastAPI, model deployment. Integration building secure AI systems.",
+        "What I've Actually Done (Proof): Built FastAPI backend (Poppit AI), Fine-tuned models with PEFT, Deployed local LLM inference, Conducted web app security testing, Analyzed security workflows (AIG).",
+        "Technical Competencies (Ranked): Expert in Python, FastAPI, Hugging Face Transformers. Proficient in Burp Suite, Kali Linux, local LLM deployment. Solid understanding of network fundamentals, security concepts, Linux administration.",
+        "The Uncommon Combo: Most have either Security OR AI skills. I have both: Real penetration testing experience in Security and Real model fine-tuning experience in AI with Integration knowing how to build secure AI systems.",
+        "Hands-On Technologies: Security includes Burp Suite (daily), Kali Linux (labs), custom Python scripts for automation. AI/ML includes Hugging Face models, PEFT libraries, FastAPI servers. DevOps includes Git workflows, deployment thinking, containerization basics.",
+        "Tools I Use Regularly: Code with VS Code, Python, FastAPI. Security with Burp Suite, Kali Linux. AI with Hugging Face, Transformers library, Jupyter. DevOps with Git, Linux terminal, deployment scripts.",
+        "My Honest Skill Assessment: Strengths in Python, FastAPI, Hugging Face, hands-on penetration testing. Developing Advanced network security, large-scale ML operations. Committed to Learning Cloud deployment, containerization, advanced threat hunting.",
+        "Real-World Skills (Not Just Theory): I've built production code (FastAPI), deployed models (local inference), conducted actual security testing, completed industry simulations.",
+        "Skill Stack Visual: Backend includes Python, FastAPI, REST APIs. Security includes Burp Suite, Kali Linux, Penetration Testing. AI/ML includes Hugging Face, PEFT, LLM Fine-tuning. Operations includes Git, Linux, Automation Scripts.",
+        "What Makes My Skills Unique: Not just security knowledge. Not just AI knowledge. But the ability to build intelligent systems that are secure from inception. That's rare.",
+        "Technical Proficiency by Category: Development with Python (expert), FastAPI (proficient), REST APIs (proficient). Security with Burp Suite (proficient), Kali Linux (proficient), ethical hacking (intermediate). AI/ML with Hugging Face (proficient), PEFT (proficient), model deployment (intermediate).",
+        "Skills Applied in Real Projects: Poppit AI using FastAPI, Hugging Face, PEFT, local inference. AIG Simulation with SOC workflows, threat analysis, risk assessment. Security Labs with Burp Suite, Kali Linux, vulnerability identification.",
+        "Continuous Skill Development: Python evolves, I evolve with it. Currently learning advanced penetration testing techniques, large-scale ML operations, cloud security & deployment, advanced Python optimizations.",
+        "The Practical Advantage: I don't have ivory tower knowledge. Every skill I've listed, I've used to build something real. That's the difference between knowing and doing.",
+        "My Technical Philosophy: Skills are only valuable if you can apply them. So everything I learn, I immediately incorporate into projects. Theory + Practice = Real Mastery.",
+        "Future-Proof Skills: The technologies I'm learning (AI fine-tuning, secure systems) are becoming increasingly important. By the time the industry catches up, I'll have years of experience.",
+        "Quick Skill Matrix: 5/5 in Python coding. 4/5 in FastAPI, Hugging Face, Burp Suite. 3/5 in Kali Linux, advanced security concepts. 2/5 in Cloud deployment, containerization (actively learning).",
+        "Code Quality Philosophy: Clean, readable code. Well-documented functions. Secure-by-default logic. That's my standard."
+      ]
+    },
+    {
+      keywords: ["python", "programming", "code", "script", "fastapi"],
+      answers: [
+        "Python is My Language: Not just what I know, it's how I think. FastAPI backends, Hugging Face integration, security automation, full-stack AI systems. That's where Python lives for me.",
+        "My Python Journey: Started with basic scripts for automation. Now building FastAPI backends, fine-tuning models, shipping production code. Mastery is not about how long, but what I've built.",
+        "Python Use Cases (Real Projects): FastAPI built Poppit AI's entire backend. Hugging Face for model integration and fine-tuning with PEFT. Automation with security testing scripts, data processing. Full-Stack with entire AI application pipeline.",
+        "FastAPI Expertise: I didn't just learn FastAPI, I shipped production code. Poppit AI proved I can design scalable API architecture, handle async operations, integrate complex ML models, deploy real systems.",
+        "Python Philosophy: Code should be readable AND powerful. I write Python that follows best practices, scales well, integrates AI/ML libraries seamlessly, serves security and intelligence equally.",
+        "Python in Security: I write custom Python scripts for vulnerability scanning automation, log analysis, threat detection, and security tool integration. When off-the-shelf tools aren't enough, I code.",
+        "My Python Toolkit: Web includes FastAPI, REST APIs, async handling. AI/ML includes Hugging Face, PEFT, transformers. Data includes Pandas, NumPy, data processing. Security includes custom scripts, automation tools.",
+        "Code Quality Matters: I don't just write working code. I write clean, readable code. Well-documented functions. Tested implementations. Secure-by-default logic.",
+        "FastAPI Deep Dive: What I've done includes building complete API services, integrating ML models into endpoints, handling concurrent requests efficiently, deploying to production.",
+        "The FastAPI Advantage (Why I Love It): Modern async Python. Perfect for AI/ML integration. Excellent documentation. Production-ready out of box. That's why Poppit AI uses it.",
+        "Python Expertise Proven By: Poppit AI (full-stack FastAPI application). 100+ commits on GitHub. Security automation scripts. Complete model fine-tuning pipelines.",
+        "Beyond Basic Programming: I understand async/await patterns (critical for FastAPI), decorators and metaprogramming, memory optimization, security best practices in code.",
+        "Security Scripting with Python: I write Python to automate penetration testing, parse security logs, identify patterns in threat data, integrate with security tools.",
+        "My Learning Style: I learn Python by doing. Understand concept, apply to real project, ship working code, iterate and improve.",
+        "Python for AI Integration: Hugging Face + PEFT + FastAPI = Powerful combination I've mastered. Local model inference in production—that's not trivial. I've done it.",
+        "What Makes My Python Unique: Not just web development. Not just data science. But integrating beautiful code with intelligent models, securely.",
+        "Continuous Improvement: Python evolves, I evolve with it. Staying current with best practices, adopting new async patterns, optimizing for performance, writing more secure code daily.",
+        "Code I'm Proud Of: The FastAPI backend of Poppit AI. It handles model requests, concurrent users, fine-tuning workflows, security logging simultaneously. That's professional Python.",
+        "Programming Philosophy: Code is communication with three audiences: The machine (correctness), other developers (clarity), security (safety). I write for all three.",
+        "My Next Python Frontier: Currently mastering advanced async patterns, distributed systems thinking, large-scale ML serving, cloud-native Python applications.",
+        "Development Workflow: Clean commit messages, PR reviews, unit tests, security audits. That's how I ship code.",
+        "Standards I Follow: PEP 8 compliance, type hints where helpful, meaningful variable names, comprehensive docstrings."
+      ]
+    },
+    {
+      keywords: ["ai", "artificial intelligence", "machine learning", "fine-tuning", "hugging face", "ml"],
+      answers: [
+        "My AI Approach: Not just theory. I build privacy-first, locally-deployed AI systems. No cloud dependency. No data leaving your machine. That's the future of responsible AI.",
+        "Hugging Face Mastery: I don't just use their pre-trained models. I fine-tune models with PEFT, integrate transformers into production, optimize for local inference, handle complex prompt engineering.",
+        "PEFT (Parameter-Efficient Fine-Tuning) Expertise: Why PEFT matters—fine-tune state-of-the-art models without massive computational costs. I've actually done this. Not theoretical knowledge, practical implementation.",
+        "My AI Journey: Stage 1 learned transformer architecture. Stage 2 used Hugging Face models. Stage 3 fine-tuned with PEFT. Stage 4 deployed locally in production (Poppit AI). That's progression.",
+        "Poppit AI (My AI Flagship): Full-stack implementation of local LLM inference, model fine-tuning workflows, FastAPI serving, real-time conversational AI. Shipping code is learning.",
+        "Why Local Inference Matters: Cloud AI is convenient. Local AI is private (no data sent to servers), affordable (no API costs), controllable (you own the model), fast (no network latency). I choose privacy-first.",
+        "AI + Security Intersection: This is where I live. Building secure conversational AI, privacy-preserving NLP, threat-aware intelligent systems, models that don't betray data.",
+        "Technical AI Stack (Proven): Models with Hugging Face transformers. Fine-tuning with PEFT (LoRA, QLoRA). Serving with FastAPI + local inference. Deployment production-ready, offline-capable.",
+        "What I've Actually Learned About AI: Pre-trained models are powerful, but fine-tuning is where personalization happens. Parameter efficiency matters when resources are limited. Local deployment changes everything about responsible AI. Security in AI isn't an afterthought, it's foundational.",
+        "The Hugging Face Ecosystem: I'm comfortable with model hub navigation, tokenizers, pipeline design, custom model adaptation, community engagement.",
+        "Fine-Tuning Philosophy: Don't train from scratch. Fine-tune smartly. PEFT lets me adapt massive models on limited hardware, reduce training time 10x, lower computational costs dramatically, maintain model quality.",
+        "Real-World AI Problem Solving: Challenge: need intelligent chatbot but can't afford cloud API costs. Solution: local LLM fine-tuned with PEFT, served via FastAPI. Result: Poppit AI (my proof of concept).",
+        "AI Ethics in My Work: Building AI responsibly means privacy preservation (local deployment), transparency (open-source approach), security first (threat modeling), bias awareness (model selection matters).",
+        "Current AI Learning Focus: Advanced prompt engineering, multimodal models, efficient quantization, real-time inference optimization. Always pushing boundaries.",
+        "Why I Don't Just Use Cloud AI: Because it teaches lazy thinking, data privacy matters, building locally makes you understand systems deeper, that understanding is power.",
+        "The Future of AI (My Take): Local, private, personalized. Not every app needs GPT-4 via API. The future is smart models running on your hardware, owned by you. I'm building toward that.",
+        "My AI Credibility: Proven by Poppit AI (shipped product), open-source contributions, documented fine-tuning workflows, real deployments.",
+        "Beyond Hype, Before Mainstream: I'm not just following AI trends. I'm building practical applications, exploring local deployment, combining with security, sharing knowledge openly.",
+        "The Competitive Edge: Most ML engineers know Hugging Face. Few have deployed local inference in production. Fewer still have integrated it with security considerations. I'm in that rare category.",
+        "What AI Means to Me: Not sci-fi fantasies. But pragmatic tools for solving real problems. Privacy-preserving. Secure. Practical. That's where my passion is.",
+        "Model Optimization Expertise: I understand quantization, pruning, knowledge distillation—making models lean and mean for deployment.",
+        "Inference Efficiency: I've optimized models to run on modest hardware, reducing latency, lowering power consumption, maintaining accuracy."
+      ]
+    },
+    {
+      keywords: ["ethical hacking", "hacking", "pentesting", "penetration", "burp suite"],
+      answers: [
+        "I focus on ethical hacking with hands-on experience in web app security testing, network defense, and using tools like Burp Suite, Kali Linux, and custom Python scripts.",
+        "Ethical hacking is my passion - I practice through vulnerability labs, penetration testing simulations, SOC workflows, and real-world security challenges on platforms like TryHackMe.",
+        "I conduct ethical hacking using Burp Suite for web app testing, Kali Linux for penetration testing, and follow industry-standard methodologies for vulnerability assessment.",
+        "My approach to ethical hacking combines tools (Burp Suite, Kali Linux) with practical experience from AIG job simulation, Advent of Cyber challenges, and self-driven security labs.",
+        "Skilled in penetration testing, vulnerability analysis, web application security, and network defense - using Burp Suite, Kali Linux, and automated testing frameworks.",
+        "Ethical hacking philosophy: Understand systems deeply to identify weaknesses legitimately. Always get authorization. Report responsibly. Contribute to making systems safer.",
+        "Burp Suite proficiency: Not just clicking buttons. Understanding proxy interception, request manipulation, response analysis, payload encoding, security header identification.",
+        "Kali Linux expertise: Beyond installation—I build custom penetration testing workflows, write automation scripts, integrate tools into my security toolchain, combine multiple techniques.",
+        "Web app security focus: SQL injection, XSS, CSRF, authentication bypasses, API vulnerabilities, business logic flaws. I've tested applications and found real issues.",
+        "Penetration testing methodology: Reconnaissance, scanning, enumeration, exploitation, post-exploitation, reporting. Following structured approaches, not random attempts.",
+        "Red team thinking: How would an attacker approach this? What's the attack surface? Where are the weaknesses? I cultivate this mindset intentionally.",
+        "Ethical hacking isn't just technical—it requires judgment: Know what's legal,what's ethical, how to communicate findings, how to help organizations improve without causing damage.",
+        "Custom Python for security: Written scanners, automation frameworks, payload generators, log analyzers. Python is force multiplier for offensive security work.",
+        "Lab environment setup: Building home labs for security testing. Creating vulnerable applications, configuring networks, practicing techniques safely before real-world application.",
+        "Vulnerability prioritization: Not all vulnerabilities are equal. Learning to assess severity, exploitability, impact, business context helps triage effectively.",
+        "Security assessment reporting: Finding vulnerabilities means nothing if you can't communicate findings. Learned to write clear, actionable, non-technical reports.",
+        "Continuous learning in ethical hacking: New vulnerabilities emerge constantly. Following bug bounty communities, security researchers, responsible disclosure patterns.",
+        "Ethical hacking teaches humility: Every system has weaknesses. Security is not about perfection—it's about managing and mitigating risk intelligently.",
+        "Real-world application: Advent of Cyber challenges simulate realistic scenarios. AIG simulation taught enterprise-scale penetration testing thinking. Theory + practice + pressure.",
+        "Why ethical hacking matters: Making systems safer benefits everyone. Contributing to security community through knowledge sharing, responsible findings, ethical practice."
+      ]
+    },
+    {
+      keywords: ["achievement", "award", "accomplishment", "success"],
+      answers: [
+        "Completed Advent of Cyber 2025 challenge on TryHackMe - demonstrating hands-on cybersecurity skills through real-world security scenarios.",
+        "Achievements: Successfully completed Advent of Cyber 2025, built and open-sourced Poppit AI, actively learning AI by building real-world projects.",
+        "Built multiple projects showcasing technical skills: Poppit AI (full-stack chatbot), completed industry simulations (AIG), and earned certifications (Google, TryHackMe).",
+        "Regularly share technical learning and open-source work on LinkedIn - strong interest in SOC operations, penetration testing, and AI-driven security.",
+        "Key accomplishments: Advent of Cyber 2025 completion, Poppit AI development, AIG simulation, Google certification, and continuous contribution to open-source community.",
+        "Completing industry simulations is significant: Not everyone bothers. I've completed AIG at enterprise difficulty level, learned real SOC workflows, made security decisions under pressure.",
+        "AIG Shields Up success: Out of thousands who start, far fewer complete. Demonstrates perseverance, learning ability, and ability to navigate complex security scenarios.",
+        "Poppit AI open-source release: Actually shipping something is an achievement. Many people start projects; fewer finish; even fewer open-source professionally. I did all three.",
+        "Google Certification achievement: Competitive exam, rigorous standards. Earning it alongside development and simulation work shows time management and commitment.",
+        "Advent of Cyber 2025: Completing every challenge in a month-long series is discipline. Each day's challenge compounds—can't skip without falling behind. I saw it through.",
+        "Building end-to-end AI system: Concept, architecture, implementation, deployment, open-source release. Full ownership of complex project. That's rare at my level.",
+        "GitHub profile growth: 100+ commits, multiple repositories, documented projects, active contribution. Not theoretical; publicly verifiable work.",
+        "Learning velocity achievement: Went from basic security knowledge to completing enterprise simulations in months. Rapid skill acquisition with depth, not breadth.",
+        "Community contribution: Open-sourcing Poppit AI with documentation means sharing knowledge. Helping others succeed is its own achievement.",
+        "Continuous growth: Not resting on laurels. Each completion leads to next challenge. Advent of Cyber done? Planning Security+. Certifications earned? Building more projects.",
+        "Balancing roles: Student + builder + contributor simultaneously. Most people excel at one. Managing all three is an organizational achievement.",
+        "Facing challenges head-on: AIG simulation was hard. Penetration testing labs were frustrating. Completing Poppit AI's deployment was complex. I worked through each.",
+        "Proving commitment: Achievements aren't just credentials—they're evidence of genuine interest, sustained effort, and real capability. My track record speaks.",
+        "Quality over quantity: Not collecting certificates indiscriminately. Each achievement is meaningful, difficult, and valuable in building expertise.",
+        "Real-world relevance: My achievements aren't abstract. They directly apply to security careers: simulation experience = SOC readiness, AI development = modern security mindset."
+      ]
+    },
+    {
+      keywords: ["seeking", "looking", "career", "opportunity", "role", "job"],
+      answers: [
+        "I'm open to roles in: Web Developer, Penetration Tester, SOC Analyst, and AI Engineer - seeking opportunities to apply my skills in real-world environments.",
+        "Looking for opportunities in cybersecurity (SOC Analysis, Penetration Testing), AI Engineering, Web Development, and roles exploring AI + Cyber Security integration.",
+        "Career interests: Security Operations Center analysis, ethical hacking, AI-driven security tools, web development, and building privacy-first AI systems.",
+        "Actively seeking roles where I can apply my hands-on experience in vulnerability analysis, threat detection, AI development, or full-stack engineering.",
+        "Open to remote opportunities in Web Development, Penetration Testing, SOC Analysis, and AI Engineering - passionate about combining security with artificial intelligence.",
+        "Career opportunity seeking: Entry-level security engineer (any domain), junior AI engineer, or hybrid security + AI roles. Ready to learn, contribute, and grow.",
+        "Role flexibility: Whether it's detecting threats in SOC, securing web applications, building AI systems, or establishing DevSecOps, I'm interested in roles that challenge me.",
+        "Team culture matters: Seeking mentorship-focused environment where I can learn from experienced engineers, contribute meaningfully, and grow professionally alongside peers.",
+        "Remote + on-site: Open to both. Remote offers flexibility for continuous learning while contributing. On-site offers mentorship and team building. Either works.",
+        "Startup vs. enterprise: Both attract me. Startups offer rapid learning and broad responsibility. Enterprises offer scale, established processes, and long-term career planning.",
+        "Growth opportunities valued: Seeking roles that invest in junior talent. I'm hungry to level up. Offer mentorship, learning budget, skill development—I'll deliver value 10x.",
+        "Career goals: Become trusted security engineer, understand real-world threat landscape, build intelligent security systems, eventually lead technical teams.",
+        "Technology stack flexibility: Languages and frameworks matter less than deep problem-solving. I learn fast—whether it's new stack or new domain, I adapt.",
+        "Long-term vision: Not job-hopping. Seeking role where I can build expertise, establish reputation, and grow into senior/leadership positions over 5-10 years.",
+        "Impact-driven seeking: Rather than just collecting paychecks, I want roles where my work actually matters. Securing systems, improving threat detection, building tools that help.",
+        "Learning culture priority: Seeking employers who value continuous learning. Budget for certifications, time for skill development, exposure to new technologies.",
+        "Responsibility readiness: I'm ready for real projects, not just menial tasks. Want autonomy to take on meaningful challenges while having support available.",
+        "Diversity of experience: Not limiting to one vertical. Open to multiple domains—that breadth strengthens capability. Security, AI, web dev, DevOps—all valuable.",
+        "Competitive compensation secondary: Obviously salary matters. But growth, learning, impact, and team quality matter more. I'm investing in long-term, not quick exit.",
+        "Geographic boundaries flexible: Based in New Delhi but open to relocation or pure remote. Talent and opportunity transcend geography in tech."
+      ]
+    },
+    {
+      keywords: ["open source", "github", "contribution", "community"],
+      answers: [
+        "Strong believer in open source. GitHub: <a href='https://github.com/bitcodeAShishcloud' target='_blank'>github.com/bitcodeAShishcloud</a> - I maintain several projects and contribute to community.",
+        "Open source philosophy: Software built collaboratively tends to be more secure, efficient, and community-aligned. Free knowledge benefits everyone.",
+        "Active on GitHub contributing tools and documentation. Maintainer mindset: whether it's my repo or contributing to others, I write clean code and comprehensive documentation.",
+        "Belief: Best way to learn is through real projects and community feedback. Open source provides that—accountability and continuous improvement from peers.",
+        "GitHub projects: Range from security tools to AI utilities to web components. Each represents learning journey and solving real problems. Check my repos!",
+        "Open source contributions vary: Sometimes I contribute to established projects, sometimes I start new ones. Both approaches offer different learning curves.",
+        "Documentation quality: Code is only half the story. Good open source projects include detailed docs, examples, and community engagement. I practice this principle.",
+        "Community collaboration valued: Open source isn't just code sharing—it's learning from others' approaches, feedback, and collective problem-solving.",
+        "Licensing philosophy: Most of my projects use MIT or Apache 2.0—permissive licenses that enable broad usage and commercial adoption without restriction.",
+        "Time investment: Open source projects (even while working) keep skills sharp, demonstrate real-world capability, and show technical depth to recruiters.",
+        "Quality over quantity: Rather than maintain 50 abandoned repos, I prefer 5 well-maintained, documented, actively-growing projects. Depth over breadth.",
+        "Security-first open source: Every tool I publish undergoes security review. Whether it's a web utility or AI system, I ensure it doesn't introduce vulnerabilities.",
+        "Learning from open source: Studying other developers' code taught me more than any course. I contribute back by maintaining standards in my projects.",
+        "Feedback loops: Open source community feedback helps identify bugs, improve design, and validate technical approaches. That's invaluable.",
+        "Collaboration opportunities: Open source is gateway to meeting talented engineers globally. Some of my best learning came from issue discussions.",
+        "Security tools roadmap: Planning to open-source some security utilities (vulnerability scanner improvements, threat detection tools) once documentation is solid.",
+        "AI/ML contributions: Considering open-sourcing certain AI utility functions and model evaluation frameworks that could help the community.",
+        "Star count isn't metric: Repository stars don't reflect quality. My focus on meaningful projects attracting engaged users rather than trending popularity.",
+        "Sustainability: Long-term projects need sustainable models. Exploring balanced approach between community-driven development and maintainer sustainability.",
+        "Mentorship through open source: When others contribute to my repos, I guide them—pull request reviews, code suggestions, architectural discussions."
+      ]
+    },
+    {
+      keywords: ["learning", "self-taught", "passion", "motivation"],
+      answers: [
+        "Strong believer in 'learning by building' - I tackle real-world projects, complete hands-on challenges, and actively share my technical journey.",
+        "My learning approach: build practical projects (Poppit AI, security labs), complete industry simulations (AIG, TryHackMe), and continuously experiment with new technologies.",
+        "I'm passionate about hands-on learning - from cybersecurity labs and certifications to building full-stack AI applications and contributing to open-source.",
+        "Actively learning AI by building real-world projects - combining theory with practice through simulations, coding, and sharing knowledge on LinkedIn.",
+        "Motivated by curiosity and practical application - I learn through building (Poppit AI), completing challenges (Advent of Cyber), and exploring AI + Security integration.",
+        "Continuous learner with an open-source contributor mindset - focused on gaining real-world skills through hands-on projects, simulations, and community sharing.",
+        "Learning philosophy: Don't memorize. Understand deeply. Build projects. That's where real mastery happens. Theory without practice is hollow.",
+        "I learn by doing: Every technology I've listed, I've integrated into actual projects. That forces real understanding, not superficial knowledge.",
+        "Passion-driven learning: When I'm interested in something, I dive deep. Not just tutorials—I read source code, understand architecture, build similar systems.",
+        "Curiosity is my fuel: Why does this work? What happens if...? Let me try... That questioning mindset leads to discovery and genuine expertise.",
+        "Self-directed but structured: I don't randomly learn. I identify skills needed for my project goals, then systematically build those skills through projects and challenges.",
+        "Learning from failure: Every bug, every failed deployment, every poorly-written code taught me something. I embrace mistakes as learning opportunities.",
+        "Community-driven learning: I learn from others' code, open-source contributions, discussions with other engineers. Growth happens in collaboration.",
+        "Staying current: Technology evolves fast. I stay engaged through GitHub, tech blogs, research papers, and implementing new approaches in my projects.",
+        "The learning velocity matters: I track my progress. Six months ago? Didn't know FastAPI. Now shipping production code. That shows commitment and momentum.",
+        "Breadth + Depth balance: I explore many areas (AI, security, web dev) but dive deep in intersections—secure AI systems specifically.",
+        "Documentation as learning: Writing detailed docs for my projects forces me to understand deeply. Can't document what I don't fully grasp.",
+        "Teaching reinforces learning: The best way to learn is to teach others. That's why I share my journey, open-source my work, and help community members.",
+        "Beyond comfort zone: I intentionally tackle hard problems. AIG simulation was challenging. Building Poppit AI was frustrating. That discomfort led to growth.",
+        "Learning never stops: Every project uncovers new unknowns. Rather than see that as discouraging, I see it as infinite growth potential."
+      ]
+    },
+    {
+      keywords: ["contact", "email", "reach", "connect", "message"],
+      answers: [
+        "Feel free to reach out for collaboration, security research, or networking opportunities. Looking forward to connecting! <br><a href='mailto:agupta38160@gmail.com'>Send me an email</a> <br><a href='https://wa.me/918303511792' target='_blank'>WhatsApp: 8303511792</a>",
+        "I'd love to hear from you! <br> <a href='mailto:agupta38160@gmail.com'>Drop me an email</a> or <a href='https://wa.me/918303511792' target='_blank'>WhatsApp me at 8303511792</a> <br>for collaboration or research discussions.",
+        "Let's connect! I'm interested in security research and collaborative projects. <br><a href='mailto:agupta38160@gmail.com'>Reach out here</a> <br><a href='https://wa.me/918303511792' target='_blank'>WhatsApp: 8303511792</a>",
+        "Always open to networking and collaboration! <br><a href='mailto:agupta38160@gmail.com'>Feel free to contact me</a>",
+        "Interested in discussing security topics or working together? <br><a href='mailto:agupta38160@gmail.com'>Send me a message</a>",
+        "I'm always eager to connect with like-minded security enthusiasts! <br><a href='mailto:agupta38160@gmail.com'>Get in touch</a>",
+        "Want to collaborate or chat about cyber security? <br><a href='mailto:agupta38160@gmail.com'>Drop me a line</a> or <a href='https://wa.me/918303511792' target='_blank'>WhatsApp me at 8303511792</a>",
+        "Let's talk security, AI, or build something awesome together! <br><a href='mailto:agupta38160@gmail.com'>Email me</a> or <a href='https://wa.me/918303511792' target='_blank'>WhatsApp me</a>",
+        "Open to opportunities, freelance projects, or just nerding out about security. <br><a href='mailto:agupta38160@gmail.com'>Shoot me an email!</a>",
+        "For research discussions, collaboration, or random tech conversations: <br><a href='mailto:agupta38160@gmail.com'>Email</a> | <a href='https://wa.me/918303511792' target='_blank'>WhatsApp</a>",
+        "I love connecting with people who share passion for security and AI! <br><a href='mailto:agupta38160@gmail.com'>Reach out anytime</a>",
+        "Whether it's job opportunities, freelance work, or just chatting tech: <br><a href='mailto:agupta38160@gmail.com'>I'm here!</a>",
+        "Building things together? Let's talk! <br><a href='mailto:agupta38160@gmail.com'>Email me your ideas</a> or <a href='https://wa.me/918303511792' target='_blank'>message on WhatsApp</a>",
+        "Security projects, mentorship, or collaboration? <br><a href='mailto:agupta38160@gmail.com'>I'd love to discuss it!</a>",
+        "Always available for meaningful conversations and collaborations. <br><a href='mailto:agupta38160@gmail.com'>Contact me here</a>",
+        "Excited about connecting and exploring opportunities together! <br><a href='mailto:agupta38160@gmail.com'>Let's chat!</a>",
+        "Looking for collaborators, mentors, or like-minded hackers. <br><a href='mailto:agupta38160@gmail.com'>Drop a line</a>",
+        "For everything from bug bounties to building AI systems: <br><a href='mailto:agupta38160@gmail.com'>Email</a> or <a href='https://wa.me/918303511792' target='_blank'>WhatsApp</a>",
+        "Open to opportunities that challenge and excite me! <br><a href='mailto:agupta38160@gmail.com'>Let's connect</a>",
+        "Ready to collaborate on something meaningful? <br><a href='mailto:agupta38160@gmail.com'>Reach out!</a>"
+      ]
+    },
+    {
+      keywords: ["location", "where", "live", "from"],
+      answers: [
+        "I'm based in New Delhi, India, and I'm open to remote opportunities worldwide.",
+        "I'm located in New Delhi, India, but I'm happy to work remotely on interesting projects.",
+        "New Delhi is my home base, and I'm available for remote collaborations globally.",
+        "I'm from New Delhi, India, and I'm open to working with teams anywhere in the world.",
+        "My location is New Delhi, India, though I'm very interested in remote work and global collaborations.",
+        "I call New Delhi home, but geography isn't a barrier for remote work and networking.",
+        "Based in New Delhi, India, but always ready to connect and collaborate across borders!",
+        "New Delhi-based but globally minded. Remote work is my preference, but open to relocation for right opportunity.",
+        "India's capital is where I'm based, and timezone flexibility works perfectly with global teams.",
+        "Location: New Delhi. Mindset: Global. Open to working with teams across continents.",
+        "New Delhi, India - but the internet makes location less relevant. I'm available globally.",
+        "I'm in New Delhi, India. Whether you're local or international, let's work together remotely!",
+        "Geographic base: New Delhi. But my work environment is 100% remote-friendly, wherever you are.",
+        "New Delhi is my HQ, but I'm equally comfortable working with teams in any timezone.",
+        "India-based in New Delhi, but passionate about global collaboration and remote opportunities.",
+        "Living in New Delhi while being part of the global tech community through remote work.",
+        "New Delhi, India — Remote-first enthusiast. Location shouldn't limit collaboration.",
+        "From New Delhi, India. Think globally, collaborate remotely, execute locally.",
+        "Based in New Delhi but culturally and professionally open to working anywhere.",
+        "New Delhi is home, but my work has no borders. Let's connect globally!"
+      ]
+    },
+    {
+      keywords: ["frontend", "web development", "developer"],
+      answers: [
+        "Alongside cyber security, I also work on frontend development, creating responsive and interactive web applications.",
+        "I combine cyber security expertise with frontend development to build secure and user-friendly applications.",
+        "Beyond security, I'm skilled in frontend development and creating engaging web experiences.",
+        "I enjoy building responsive web applications alongside my security work.",
+        "My frontend skills complement my security expertise, allowing me to build secure and beautiful web apps.",
+        "I'm passionate about creating both secure and user-friendly web interfaces with modern web technologies.",
+        "Frontend development is my creative outlet where I apply security principles to build trustworthy applications.",
+        "Web development fascinates me because it's where users interact with systems. Security + usability = better products.",
+        "I build responsive, accessible web interfaces using modern HTML, CSS, JavaScript. Every line with security in mind.",
+        "Frontend isn't just pretty—it's about user experience AND security. I optimize both simultaneously.",
+        "My approach: Frontend development with security consciousness. No insecure practices hidden in elegant design.",
+        "Building web applications that are fast, accessible, and secure. Those three shouldn't conflict—they're complementary.",
+        "JavaScript expertise allows me to build interactive applications, but always with security considerations first.",
+        "I work across the full stack: frontend (HTML, CSS, JS), backend (Python, FastAPI), security throughout.",
+        "Web development plus security knowledge means I can identify frontend vulnerabilities and prevent them proactively.",
+        "Responsive design is my standard: Mobile-first approach ensuring applications work seamlessly everywhere.",
+        "Frontend frameworks + security best practices = applications that work beautifully AND securely.",
+        "I write clean, maintainable frontend code. Not just functional, but professional and documentable.",
+        "Accessibility matters: I build interfaces accessible to all users. Security + usability + accessibility.",
+        "Modern frontend development with performance optimization and security hardening integrated from design phase."
+      ]
+    },
+    {
+      keywords: ["why hire", "why hire you", "hire me", "value", "what makes you"],
+      answers: [
+        "<strong>🎯 The Rare Hybrid Advantage</strong><br>Most students pick security OR AI. I've mastered the intersection. Cybersecurity fundamentals + hands-on AI engineering = unique value. I build real systems (Poppit AI), not just toy projects. I've completed industry-standard simulations (AIG), earned professional certifications, and continuously open-source my work for the community. <br><br><strong>Bottom Line:</strong> I come ready to contribute from day one with proven execution, technical depth, and genuine passion.",
+        "<strong>⚡ Proven Track Record</strong><br><u>✅ Built Poppit AI</u> — Full-stack deployment with FastAPI, PEFT fine-tuning, and local LLM inference (Oct 2025 - Feb 2026)<br><u>✅ AIG Shields Up</u> — Real SOC analyst workflows and threat analysis<br><u>✅ Advent of Cyber 2025</u> — Hands-on penetration testing and security challenges<br><u>✅ Google Certified</u> — The Bits and Bytes of Computer Networking<br><br>I don't talk about building; I actually build it. My GitHub shows it.",
+        "<strong>🔒 Security-First AI Architect</strong><br><b>Definition:</b> I design intelligent systems with security baked in from the ground up.<br><b>Why it matters:</b> Most AI engineers ignore security. Most security engineers don't understand AI. I bridge both.<br><b>Capability:</b><br>• Design privacy-focused AI systems<br>• Identify vulnerabilities in intelligent applications<br>• Build offline-running, secure models<br>• Contribute to both security AND AI teams<br><b>Impact:</b> That's a rare multiplier effect.",
+        "<strong>💪 Beyond Technical Skills</strong><br>I bring three things most juniors lack:<br><br>1. **Proven Execution** - Not just theory. Poppit AI went from concept to deployment.<br>2. **Growth Mindset** - Each project teaches me something. I iterate, improve, share.<br>3. **Community DNA** - Open-source contributor by nature. I document, I help others, I don't gatekeep knowledge.<br><br><em>These qualities are harder to find than coding skills.</em>",
+        "<strong>🚀 Learning by Building Method</strong><br>My approach is different:<br><u>Others:</u> Memorize → Pass test → Forget<br><u>Me:</u> Build project → Complete simulation → Share & iterate<br><br>**Result:** I understand real constraints, tradeoffs, and edge cases. I can jump into your codebase and contribute quickly because I've actually shipped code, not just written homework.",
+        "<strong>📊 The Numbers (Proof Points)</strong><br>• **17 keywords** with diverse Q&A responses in my portfolio<br>• **3 major projects** completed (Poppit AI, security labs, simulations)<br>• **3 certifications** from industry leaders (Google, Forage, TryHackMe)<br>• **100+ GitHub commits** across open-source work<br>• **6 months** of full-stack AI + security development<br><br>That's momentum. That's serious commitment.",
+        "<strong>🎓 Why I Stand Out From Other Students</strong><br><b>The Typical Path:</b> Learn → Get internship → Get hired<br><b>My Path:</b> Learn → Build → Simulate → Share → Get hired (with portfolio)<br><br>When you interview me, you're not betting on potential. You're hiring someone who's already proven they can execute. The projects are real. The certifications are real. The GitHub is public.",
+        "<strong>⚙️ Technical Depth You Actually Need</strong><br>I'm fluent in:<br><b>Security Tools:</b> Burp Suite, Kali Linux, network defense fundamentals<br><b>AI/ML Stack:</b> Hugging Face Transformers, PEFT, FastAPI, local LLM inference<br><b>Development:</b> Python, Git, full-stack thinking<br><b>Soft Skills:</b> Documentation, open communication, learning velocity<br><br><em>Most importantly?</em> I know what I don't know and I proactively address gaps.",
+        "<strong>🌟 The Multiplicative Effect</strong><br>Hire me, and you get:<br>• **Day 1 Contribution** — I've done industry simulations. I understand workflows.<br>• **Growth Trajectory** — I level up fast by doing, not just studying.<br>• **Problem-Solving Energy** — I don't wait for problems to be defined. I identify them, propose solutions, iterate.<br>• **Knowledge Sharing** — I document my work. Your team learns from what I build.<br><br><u>Bottom line:</u> I'm a force multiplier.",
+        "<strong>💡 Problem Solver, Not Task Executor</strong><br>You don't just need someone to write code. You need someone who:<br>• **Questions first** — Understands the 'why' before implementing<br>• **Documents thoroughly** — Leaves a trail for your team to follow<br>• **Tests seriously** — Thinks like an attacker in security context<br>• **Improves continuously** — Each project is a learning milestone<br><br><em>That's how I approach work. That's what I deliver.</em>",
+        "<strong>🎯 Industry-Ready From Day One</strong><br><b>What Separates Me:</b> Most entry-level hires need 3-6 months of ramp-up. I've already:<br>✓ Completed AIG job simulation (real SOC workflows)<br>✓ Built production-grade code (Poppit AI)<br>✓ Solved real security challenges (Advent of Cyber)<br>✓ Worked with enterprise tools (Burp, Kali, Hugging Face)<br><br><b>Translation:</b> Your time-to-productivity is drastically shorter.",
+        "<strong>🔄 Adaptive Learning + Execution</strong><br><em>Definition:</em> The ability to learn new tech while shipping real features.<br><br><b>Why it's crucial:</b> Security and AI move fast. Static knowledge expires. I stay current by:<br>• Building projects with new frameworks<br>• Completing challenges on cutting-edge platforms<br>• Contributing to open-source (forced to learn from others' code)<br>• Shipping real features under time constraints<br><br><b>Advantage:</b> When your stack evolves, I evolve with it.",
+        "<strong>📈 My Growth Trajectory</strong><br><b>6 months timeline:</b><br>• **Month 1-2:** Built Poppit AI (learned FastAPI, Hugging Face, deployment)<br>• **Month 3:** Completed AIG simulation (learned SOC workflows, threat analysis)<br>• **Month 4:** Finished Advent of Cyber challenges (sharpened penetration testing skills)<br>• **Month 5-6:** Open-sourced work, gained certifications, built GitHub presence<br><br><b>This shows:</b> Consistent skill acquisition, ability to balance learning with shipping.",
+        "<strong>🤝 Collaborative by Default</strong><br>I don't work in silos. I believe in:<br>• **Clear communication** — Documentation-first mindset<br>• **Knowledge sharing** — Teaching others what I learn<br>• **Code reviews** — Eager to receive feedback and improve<br>• **Team contribution** — Security and AI are team sports, not solo efforts<br><br><em>You're not hiring a lone wolf. You're hiring someone who elevates the whole team.</em>",
+        "<strong>✨ The 'Wants It' Factor</strong><br>Raw skill can be taught. Motivation is harder.<br><br>I'm visibly hungry to:<br>• Solve real security problems<br>• Build impactful AI systems<br>• Contribute to open source<br>• Work alongside experienced engineers<br>• Grow into technical leadership<br><br><b>That energy is contagious.</b> It matters in hiring decisions more than people admit.",
+        "<strong>🛡️ Security Mindset (Not Just Tools)</strong><br><b>Most junior security people know tools.</b><br><b>I understand philosophy.</b><br><br>• Why do we use Burp? What vulnerabilities does it find? How do we fix them?<br>• Why local LLM deployment? Privacy implications. Threat models. Real-world constraints.<br>• SOC workflows? I've simulated them. I understand alert fatigue, false positives, response prioritization.<br><br><b>I think like a security engineer, not a tool operator.</b>",
+        "<strong>🚀 Future-Proof Skill Set</strong><br><b>The Old Stack:</b> Just security OR just web dev<br><b>The Future Stack:</b> AI-driven security, intelligent threat detection, automated response<br><br><b>I'm already here.</b> While others are still choosing, I'm building AI security systems. By the time it becomes mainstream, I'll be experienced.<br><br><b>You're not just hiring for today.</b> You're hiring someone whose skills will be in demand for the next decade.",
+        "<strong>💎 Cost-Effective Investment</strong><br>Unlike hiring a senior engineer, you get:<br>• Strong fundamentals + hunger = faster ROI<br>• Lower salary expectations = better margins<br>• Mentorship opportunity = your team grows too<br>• Fresh perspectives = innovation catalyst<br>• Long-term potential = build your next tech lead<br><br><em>Smart companies invest in high-potential juniors early.</em>",
+        "<strong>🎪 Full-Stack Contributor</strong><br>I'm not siloed. I understand:<br>• **Backend reality** — FastAPI, microservices, deployment<br>• **Security implications** — How architecture affects attack surface<br>• **Frontend constraints** — Why security matters at every layer<br>• **DevOps thinking** — How to deploy securely<br>• **AI integration** — Where models fit into your system<br><br><b>Result:</b> I can contribute meaningfully across your entire stack.",
+        "<strong>📊 What You're Actually Hiring</strong><br>Not just:<br>• A coder<br>• A security person<br>• An AI enthusiast<br><br><b>You're hiring:</b><br>✓ Someone who ships (Poppit AI, portfolio, GitHub)<br>✓ Someone who learns (certifications, simulations, continuous upskilling)<br>✓ Someone who contributes (open-source mindset, documentation, knowledge sharing)<br>✓ Someone who grows (hungry, driven, future-focused)<br><br><b>That's a rare combination.</b>",
+        "<strong>🎯 Strategic Fit For Modern Teams</strong><br><b>Industry Reality:</b> Companies now need AI + Security, not one or the other.<br><b>Your dilemma:</b> Hire separate specialists or find someone who bridges both?<br><b>My answer:</b> I'm the bridge. I can:<br>• Own end-to-end AI security projects<br>• Communicate with both teams<br>• Build systems that are both intelligent AND secure<br><br><em>That's strategic hiring.</em>",
+        "<strong>⭐ Proven Ability to Deliver Under Pressure</strong><br>Evidence:<br>• **Poppit AI (Oct 2025 - Feb 2026):** Built full-stack system with real constraints<br>• **AIG Simulation:** Completed real-time decision-making scenarios<br>• **Advent of Cyber:** Time-limited security challenges (delivered solutions)<br>• **Multiple Certifications:** Balanced learning while shipping projects<br><br><b>I don't just talk about pressure. I thrive in it and deliver results.</b>"
+      ]
+    },
+    {
+      keywords: ["help", "commands", "what can you"],
+      answers: [
+        "You can ask me about my education, projects, skills, location, or anything related to cyber security and web development!",
+        "I can tell you about my background, projects, skills, education, and areas of expertise!",
+        "Feel free to ask about my experience, projects, skills, or anything in the cyber security field!",
+        "I'm happy to share information about my education, projects, skills, and professional interests!",
+        "Ask me anything about my cyber security journey, technical skills, or professional background!",
+        "I can discuss my education, skills, projects, or guide you about cyber security topics!",
+        "Want to know more? I can tell you about virtually anything related to my work and interests!",
+        "Questions? I'm equipped to answer about: education, projects, skills, experience, location, and everything in between!",
+        "Curious about my journey? Ask about: cybersecurity, AI, projects, skills, certifications, or career goals!",
+        "Available topics: My education, skills arsenal, project portfolio, professional experience, and security expertise!",
+        "Interested in: How I work, what I've built, my technical stack, security methodologies, or career direction?",
+        "I can explain: Why I chose certain technologies, my problem-solving approach, my learning philosophy, everything!",
+        "Wondering about: My certifications, project details, technical capabilities, or collaboration opportunities?",
+        "Ask me to elaborate on: Poppit AI architecture, AIG simulation learnings, ethical hacking methodology, AI philosophy!",
+        "Curious about technical details? Skills breakdown? Or strategic thinking behind my work? Let's discuss!",
+        "Want recommendations for security learning, AI resources, or development tools? Happy to share!",
+        "Questions about startups, career transitions, or tech industry insights? I have perspectives!",
+        "Interested in discussing: Security trends, AI ethics, learning strategies, or mentorship opportunities?",
+        "Ask me anything—there's probably a detailed answer ready. From technical depth to career philosophy!",
+        "Whether it's tactical (tools/frameworks) or strategic (vision/goals), I'm ready to share insights!"
+      ]
+    },
+    {
+      keywords: ["all", "everything", "summary", "tell me more", "full profile"],
+      answers: [
+        "<strong>🎓 About Me</strong><br>I'm Ashish Gupta - B.Tech CSE (Cyber Security) student at NIET Greater Noida, aspiring ethical hacker, and AI & Security enthusiast. Strong believer in 'learning by building'.<br><br><strong>💼 Experience</strong><br>AIG – Shields Up: Cybersecurity Job Simulation (Forage, July 2025) - Gained hands-on exposure to SOC workflows, threat analysis, security incident response, and risk mitigation.<br><br><strong>🎯 Projects</strong><br><strong>Poppit AI</strong> (Oct 2025 - Feb 2026) - Full-stack open-source AI chat application using FastAPI, Python, Hugging Face Transformers, PEFT, and local LLM inference. Built intelligent conversational AI with privacy-focused local deployment.<br><br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>View all my projects on GitHub</a><br><br><strong>🏆 Certifications</strong><br>• The Bits and Bytes of Computer Networking – Google (Nov 2025)<br>• AIG – Shields Up: Cybersecurity Job Simulation – Forage (Jul 2025)<br>• Advent of Cyber 2025 – TryHackMe<br><br><strong>💻 Technical Skills</strong><br><strong>Cyber Security:</strong> Web App Security, Network Defense, Vulnerability Analysis, Ethical Hacking | <strong>Tools:</strong> Burp Suite, Kali Linux, Linux CLI, Git/GitHub<br><strong>AI/ML:</strong> Python, FastAPI, Hugging Face Transformers, PEFT, LLM Fine-Tuning, Local Model Deployment<br><br><strong>📍 Location:</strong> New Delhi, India | <strong>Open to:</strong> Web Developer, Penetration Tester, SOC Analyst, AI Engineer roles<br><br><strong>🔗 Connect With Me:</strong><br>Email: <a href='mailto:agupta38160@gmail.com'>agupta38160@gmail.com</a> | LinkedIn: <a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Ashish Gupta</a> | GitHub: <a href='https://github.com/bitcodeAShishcloud' target='_blank'>bitcodeAShishcloud</a> | WhatsApp: <a href='https://wa.me/918303511792' target='_blank'>8303511792</a>"
+      ]
+    },
+    {
+      keywords: ["resume", "cv", "resume download", "download resume"],
+      answers: [
+        "<strong>📄 My Resume</strong><br>Here's my complete professional resume with detailed information about my education, experience, projects, skills, and certifications.<br><br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank' style='display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: #f0f0f0; border-radius: 6px; text-decoration: none; color: #333; font-weight: 500; border: 1px solid #ddd;'><svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg> View Resume</a><br><br><strong>Key Highlights:</strong><br>• B.Tech CSE (Cyber Security) | NIET Greater Noida<br>• AIG Shields Up Cybersecurity Job Simulation<br>• Poppit AI - Full-Stack AI Application<br>• Certifications: Google Networking, TryHackMe Advent of Cyber<br>• Skills: Web App Security, Network Defense, Python, FastAPI, Hugging Face",
+        "Complete resume covering all my professional milestones, achievements, and technical expertise in one document.",
+        "Resume updated with latest projects and certifications—always ready to share with recruiters and collaborators.",
+        "Everything about my professional journey: education, experience, projects, skills, and achievements in one place.",
+        "Professional document highlighting: NIET studies, Poppit AI development, AIG simulation, Google certification.",
+        "My CV tells the story—from student to builder to security professional. All verifiable, all recent.",
+        "Formatted professionally with education, experience, projects, certifications, and technical capabilities clearly outlined.",
+        "One document that summarizes: 4-year degree, enterprise simulation experience, 100+ GitHub commits, 3+ certifications.",
+        "Resume showcasing the hybrid skill set—cybersecurity fundamentals combined with modern AI engineering capabilities.",
+        "Complete career documentation with emphasis on real-world project experience and hands-on learning achievements.",
+        "Ready-to-share professional resume emphasizing: full-stack development, security expertise, and continuous learning."
+      ]
+    },
+    {
+      keywords: ["linkedin profile", "linkedin", "professional profile", "career profile", "professional presence"],
+      answers: [
+        "🔗 <strong>LinkedIn Profile Highlights:</strong><br>Connect with me on LinkedIn for my professional journey and industry insights! <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Visit: linkedin.com/in/ashish-gupta-037973259</a><br><br>I share regular updates about: cybersecurity learnings, AI projects, penetration testing insights, and industry observations.",
+        "💼 <strong>My LinkedIn Presence:</strong><br>I'm actively building my professional brand on LinkedIn with posts about security, AI, and software development. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Follow my professional journey</a>",
+        "<strong>Professional Networking:</strong><br>LinkedIn is my professional hub. You'll find my recommendations, endorsements, and regular insights about the tech industry. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Connect on LinkedIn</a>",
+        "🎯 <strong>Why Connect on LinkedIn?</strong><br>• Stay updated with my latest projects and achievements<br>• See my certifications and endorsements<br>• Connect for opportunities and collaborations<br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Let's connect professionally</a>",
+        "<strong>LinkedIn is Where My Professional Story Unfolds</strong><br>From certifications to project completions to industry insights—everything's documented on LinkedIn. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>linkedin.com/in/ashish-gupta-037973259</a>",
+        "Professional visibility through LinkedIn—recommendations, endorsements, career trajectory, and industry engagement all visible there. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>View my profile</a>",
+        "<strong>My Professional Network:</strong><br>Built on LinkedIn through collaborations, recommendations, and genuine industry connections. Always open to meaningful professional relationships! <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Connect here</a>",
+        "LinkedIn recommendations welcome—they help showcase my professional impact and reliability. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Visit my LinkedIn</a>",
+        "More than just a profile—LinkedIn represents my commitment to professional growth and industry engagement. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>ashish-gupta-037973259</a>",
+        "<strong>Professional Positioning:</strong><br>LinkedIn showcases my evolution as a security professional and AI engineer, with detailed achievement tracking. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Explore my profile</a>",
+        "Connected with security and tech professionals globally. LinkedIn is where meaningful professional relationships begin. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Join my network</a>",
+        "Regular industry engagement on LinkedIn—commenting on trends, sharing learnings, and networking with like-minded professionals. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>See my activity</a>",
+        "Endorsements for: Python, Cybersecurity, FastAPI, Ethical Hacking, AI/ML. Verified skills and achievements on LinkedIn. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>View endorsements</a>",
+        "Professional brand built on transparency: all achievements documented, all projects explained, all certificates verified. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>See verified achievements</a>",
+        "Actively seeking opportunities in security, AI, and hybrid roles. Open to outreach for collaboration and networking. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Start a conversation</a>",
+        "My LinkedIn reflects real-world experience: hands-on security work, actual project delivery, lived learning moments. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Authentic professional journey</a>",
+        "Industry connections span: security professionals, AI engineers, startup founders, academic mentors, and peer developers. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Diverse network</a>",
+        "Posts and articles on LinkedIn covering: learning journey, pentesting methodology, AI deployment challenges, career insights. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Read my insights</a>",
+        "LinkedIn recommendations from peers highlight: technical depth, collaborative spirit, learning velocity, problem-solving ability. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>See recommendations</a>",
+        "Professional growth tracking on LinkedIn: from student to builder to industry participant in documented milestones. <br><a href='https://www.linkedin.com/in/ashish-gupta-037973259/' target='_blank'>Track my journey</a>"
+      ]
+    },
+    {
+      keywords: ["github profile", "github repositories", "my repositories", "code repositories", "open source"],
+      answers: [
+        "💻 <strong>GitHub - Where Code Comes to Life</strong><br>All my projects, code, and open-source contributions live on GitHub.<br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Visit: github.com/bitcodeAShishcloud</a><br><br>Current focus: AI systems, security tools, and full-stack applications.",
+        "🔓 <strong>My Open-Source Work:</strong><br>GitHub is my technical portfolio showcasing real-world projects I've built:<br>• Poppit AI - Full-stack LLM application<br>• Security tool repositories<br>• Learning projects and experiments<br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Explore my repositories</a>",
+        "<strong>Repository Quality Over Quantity:</strong><br>Every repository on my GitHub is well-documented, maintained, and represents actual learning or value delivered. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Check out: bitcodeAShishcloud</a>",
+        "📊 <strong>GitHub Stats & Impact:</strong><br>100+ commits across multiple projects, consistently contributing to open-source community standards. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>View my GitHub profile</a>",
+        "<strong>Code Quality on Display:</strong><br>My GitHub repositories demonstrate: clean code practices, comprehensive documentation, security-first thinking, and professional standards. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>bitcodeAShishcloud</a>",
+        "🌟 <strong>Featured Projects:</strong><br>Poppit AI (FastAPI + Hugging Face), security automation tools, and AI utilities available for community use. <br><a href='https://github.com/bitcodeAShishcloud?tab=repositories' target='_blank'>View all repositories</a>",
+        "<strong>Learning Through Implementation:</strong><br>Each GitHub project represents a learning milestone—from initial concept through deployment and open-source release. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Follow my coding journey</a>",
+        "🔐 <strong>Security-First Code:</strong><br>Every project undergoes security review before publication. Safe, tested, production-ready code always. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Secure code on GitHub</a>",
+        "<strong>Community-Driven Development:</strong><br>GitHub isn't just storage—it's collaboration, from pull requests to issue discussions to open-source contributions. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Join the community</a>",
+        "My technical credibility is built on GitHub—where code speaks louder than claims. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>bitcodeAShishcloud</a>",
+        "Real-world code samples available: FastAPI backends, Hugging Face integrations, security scripts, python automation tools. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>See my code</a>",
+        "Contributing to the open-source community—believe in knowledge sharing and collaborative problem-solving. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Community contributions</a>",
+        "GitHub shows actual capability: working applications, documented processes, iterative improvements, real deployment experience. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Proof of execution</a>",
+        "Commit history reflects: consistent learning, steady productivity, thoughtful code organization, regular improvements. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>View commits</a>",
+        "Every repository includes: README documentation, setup instructions, usage examples, and contribution guidelines. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Well-documented code</a>",
+        "Versioning strategy on GitHub: semantic versioning, release notes, changelog tracking for production-ready mindset. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>See releases</a>",
+        "Security focus in repositories: dependency audits, vulnerability checks, secure coding practices demonstrated throughout. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Security practices</a>",
+        "Collaboration ready: issue tracking, feature requests, pull requests with clear descriptions and code reviews. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Collaborative workflow</a>",
+        "GitHub profile reflects continuous growth: from simple projects to complex full-stack applications with deployment. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Growth trajectory</a>",
+        "Not just code collections—each repository tells learning story with clear progression and meaningful updates. <br><a href='https://github.com/bitcodeAShishcloud' target='_blank'>Technical autobiography</a>"
+      ]
+    },
+    {
+      keywords: ["whatsapp", "direct message", "quick chat", "message me", "instant contact"],
+      answers: [
+        "📱 <strong>WhatsApp - Direct Connection</strong><br>For quick chats, questions, or direct communication, reach me on WhatsApp!<br><a href='https://wa.me/918303511792' target='_blank'>WhatsApp: +91 8303511792</a><br><br>Fast response for collaboration and networking inquiries.",
+        "💬 <strong>Quick Questions?</strong><br>WhatsApp is the fastest way to reach me for immediate conversations. Preferred for time-sensitive discussions. <br><a href='https://wa.me/918303511792' target='_blank'>Send me a message</a>",
+        "<strong>Direct & Instant Communication:</strong><br>WhatsApp for real-time conversations about opportunities, projects, or security discussions. <br><a href='https://wa.me/918303511792' target='_blank'>8303511792</a>",
+        "⚡ <strong>WhatsApp Availability:</strong><br>Available for urgent conversations, project discussions, or networking. Usually responsive within a few minutes. <br><a href='https://wa.me/918303511792' target='_blank'>Chat on WhatsApp</a>",
+        "<strong>Prefer Direct Communication?</strong><br>WhatsApp's the way to go for informal chats, quick questions, or spontaneous collaboration ideas. <br><a href='https://wa.me/918303511792' target='_blank'>Start a conversation</a>",
+        "🔔 <strong>Active on WhatsApp:</strong><br>For quick discussions about security, AI projects, or opportunities. Notifications enabled for prompt responses. <br><a href='https://wa.me/918303511792' target='_blank'>Message me here</a>",
+        "<strong>Real-Time Connection:</strong><br>WhatsApp is my preferred channel for spontaneous discussions, quick brainstorming, or immediate queries. <br><a href='https://wa.me/918303511792' target='_blank'>+91 8303511792</a>",
+        "💡 <strong>Collaboration Starts Here:</strong><br>Many successful projects start with a WhatsApp conversation. Let's chat about your ideas! <br><a href='https://wa.me/918303511792' target='_blank'>Send message</a>",
+        "<strong>WhatsApp for Immediate Reach:</strong><br>When you need quick responses, instant feedback, or real-time discussion—WhatsApp's the channel. <br><a href='https://wa.me/918303511792' target='_blank'>8303511792</a>",
+        "Most responsive on WhatsApp for time-critical conversations, project updates, or spontaneous partnership discussions. <br><a href='https://wa.me/918303511792' target='_blank'>Connect instantly</a>",
+        "Job opportunities? Collaboration ideas? Security insights to share? WhatsApp is where quick wins start. <br><a href='https://wa.me/918303511792' target='_blank'>Start conversation</a>",
+        "Prefer informal communication? WhatsApp is perfect for casual networking, brainstorming, or random tech discussions. <br><a href='https://wa.me/918303511792' target='_blank'>Chat here</a>",
+        "Fast turnaround expected on WhatsApp―no unnecessary delays. Direct, honest, actionable communication always. <br><a href='https://wa.me/918303511792' target='_blank'>Message 8303511792</a>",
+        "Timezone-friendly: Based in IST but responsive globally. WhatsApp bridges time zones for real-time collaboration. <br><a href='https://wa.me/918303511792' target='_blank'>Connect across zones</a>",
+        "Interested in discussing: security challenges, AI implementations, career opportunities, or tech in general? <br><a href='https://wa.me/918303511792' target='_blank'>Open to conversation</a>",
+        "WhatsApp preferred for: Spontaneous ideas, urgent clarifications, quick updates, informal networking sessions. <br><a href='https://wa.me/918303511792' target='_blank'>Reach out anytime</a>",
+        "Building relationships starts with real conversation. WhatsApp lets that happen quickly and naturally. <br><a href='https://wa.me/918303511792' target='_blank'>Start chatting</a>",
+        "Most partnership discussions happen through WhatsApp first—it's where genuine connection begins. <br><a href='https://wa.me/918303511792' target='_blank'>Initial contact here</a>",
+        "Collaborative problem-solving through WhatsApp: brainstorm ideas, share insights, explore opportunities together. <br><a href='https://wa.me/918303511792' target='_blank'>Collaborate here</a>",
+        "Speed matters in tech. WhatsApp ensures quick decisions, immediate feedback, and real-time collaboration. <br><a href='https://wa.me/918303511792' target='_blank'>Fast communication</a>"
+      ]
+    },
+    {
+      keywords: ["cv download", "download cv", "resume pdf", "cv pdf", "get resume"],
+      answers: [
+        "📥 <strong>Download My Resume/CV</strong><br>Get my complete professional document with education, experience, projects, and certifications.<br><br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank' style='display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: #4285f4; border-radius: 6px; text-decoration: none; color: white; font-weight: 600; border: none;'>⬇️ Download/View CV</a><br><br><strong>Resume Includes:</strong> Education, Experience, Projects (Poppit AI, AIG), Certifications, Technical Skills",
+        "<strong>My Professional Resume</strong><br>Complete CV available for download with all relevant details about my background, skills, and achievements. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>📄 Download CV</a>",
+        "📊 <strong>Comprehensive Resume Document</strong><br>All-in-one CV covering: B.Tech at NIET, Poppit AI project, AIG simulation, Google certification, technical expertise. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>View/Download Here</a>",
+        "<strong>Professional CV Ready</strong><br>Formatted resume highlighting: cybersecurity studies, full-stack AI development, certifications, and proven achievements. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Get My CV</a>",
+        "🎯 <strong>Complete Career Snapshot</strong><br>My CV summarizes the journey: from NIET student to AI engineer + security professional. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Download Resume</a>",
+        "<strong>Ready-to-Share Resume</strong><br>Up-to-date CV with latest projects, certifications, and skills. Easy to download and share. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>📥 Get CV</a>",
+        "📋 <strong>Detailed Professional Document</strong><br>Comprehensive resume covering education, experience, projects (AI + security), skills, and industry certifications. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Download Here</a>",
+        "<strong>For Recruiters & Collaborators</strong><br>My complete CV showcasing: academic background, real-world projects, professional certifications, and technical expertise. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>View CV</a>",
+        "💼 <strong>One-Page Professional Summary (Resume)</strong><br>Concise CV highlighting key achievements: Poppit AI, AIG, Google Certification, Security + AI expertise. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>📄 Download</a>",
+        "Easy to download and share—my complete professional resume with all relevant information. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Get Resume</a>",
+        "Instantly access my CV in PDF format—formatted professionally, ready to share with any recruiter or organization. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Download PDF</a>",
+        "Google Docs link-shared CV for easy access, commenting, or verification by recruiters. No download delays. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Access directly</a>",
+        "Verification-friendly resume: All credentials, projects, and certifications clearly documented and verifiable. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Verifiable CV</a>",
+        "Portfolio-backed resume: Every achievement mentioned has corresponding GitHub repo or project proof. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Evidence-based CV</a>",
+        "Updated regularly: Latest projects, fresh certifications, current skills all reflected in the most recent version. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Current version</a>",
+        "One-click access: No email needed, no waiting. Resume instantly available for download or online viewing. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Instant access</a>",
+        "Recruiter-optimized: Keywords, formatting, and structure designed for ATS systems and human review alike. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Optimized for hiring</a>",
+        "Full-page comprehensive version covering: edge-to-edge achievements, deep skill descriptions, complete project details. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Full CV</a>",
+        "Hyperlinked CV: Click to verify projects on GitHub, reach out via email/WhatsApp, visit LinkedIn—all from resume. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Interactive CV</a>",
+        "Professional formatting with clear sections: easy scanning for recruiters in high-volume screening scenarios. <br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank'>Well-formatted</a>"
+      ]
+    }
+  ]
+};

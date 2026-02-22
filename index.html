@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Ashish Gupta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="backdrop">
+      <div class="blob blob-one"></div>
+      <div class="blob blob-two"></div>
+      <div class="grid"></div>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" title="Menu">
+      <span class="hamburger">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </span>
+    </button>
+
+    <!-- Menu Sidebar -->
+    <nav class="menu-sidebar" id="menu-sidebar">
+      <div class="menu-header">
+        <h2>Menu</h2>
+        <button class="menu-close" id="menu-close" aria-label="Close Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- General Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">General</h3>
+        <div class="font-size-control">
+          <label for="font-size-slider">Font Size:</label>
+          <div class="font-size-input-group">
+            <button class="font-size-btn" id="font-decrease" title="Decrease font size">−</button>
+            <input type="range" id="font-size-slider" min="12" max="24" value="16" class="font-size-slider" />
+            <button class="font-size-btn" id="font-increase" title="Increase font size">+</button>
+            <span class="font-size-display" id="font-size-display">16px</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security Showcase Section -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Showcase</h3>
+        <a href="https://bitcodeashishcloud.github.io/SOC-ui/" target="_blank" rel="noopener noreferrer" class="showcase-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+            <polyline points="13 2 13 9 20 9"></polyline>
+          </svg>
+          Security Showcase
+        </a>
+      </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow" id="greeting"></p>
+          <h1 id="headline"></h1>
+          <p class="tagline" id="role"></p>
+        </div>
+
+        <div class="portrait-card">
+          <div class="portrait-frame">
+            <img id="profile-image" src="assets/Ashish.jpeg" alt="Ashish Gupta" />
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ashish-gupta-037973259/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn - Professional Profile" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://github.com/bitcodeAShishcloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub - My Code & Projects" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://wa.me/918303511792" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp - Quick Chat" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="whatsapp-icon ">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </a>
+          <a href="mailto:agupta38160@gmail.com" aria-label="Email" title="Email - Direct Contact" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="M22 7l-10 5L2 7"></path>
+            </svg>
+          </a>
+          <a href="https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume/CV" title="Resume - Download My CV" class="social-link resume-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="resume-icon">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <nav class="quick-links" id="quick-links"></nav>
+
+      <section class="detail-grid">
+        <article class="detail-card" id="about"></article>
+        <article class="detail-card" id="education"></article>
+        <article class="detail-card" id="projects"></article>
+        <article class="detail-card" id="skills"></article>
+        <article class="detail-card" id="contact"></article>
+        <article class="detail-card" id="location"></article>
+      </section>
+
+      <div class="chat-container" id="chat-container"></div>
+      <div class="suggestion-chips" id="suggestion-chips"></div>
+    </main>
+
+    <div class="prompt-wrapper">
+      <div class="prompt">
+        <label for="prompt-input" class="sr-only">Enter your message</label>
+        <input id="prompt-input" type="text" placeholder="" title="Enter your message" />
+        <button class="prompt-btn" aria-label="Send">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.4 20.4L20.85 12.92C21.66 12.57 21.66 11.43 20.85 11.08L3.4 3.6C2.74 3.31 2.01 3.8 2.01 4.51L2 9.12C2 9.62 2.37 10.05 2.87 10.11L17 12L2.87 13.88C2.37 13.95 2 14.38 2 14.88L2.01 19.49C2.01 20.2 2.74 20.69 3.4 20.4Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
