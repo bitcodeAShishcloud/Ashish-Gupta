@@ -3,7 +3,7 @@
 A modern, interactive portfolio website featuring an intelligent chatbot with score-based answer matching and dynamic responses.
 
 
-                                        [🌐 Live Portfolio](https://bitcodeashishcloud.github.io/Ashish-Gupta/)
+[🌐 Live Portfolio](https://bitcodeashishcloud.github.io/Ashish-Gupta/)
 
 
 ## 🌟 Features
