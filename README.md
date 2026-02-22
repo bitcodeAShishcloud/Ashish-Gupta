@@ -2,6 +2,10 @@
 
 A modern, interactive portfolio website featuring an intelligent chatbot with score-based answer matching and dynamic responses.
 
+
+🌐 Live Portfolio](https://bitcodeashishcloud.github.io/Ashish-Gupta-Portfolio/)
+
+
 ## 🌟 Features
 
 ### Smart Chatbot
@@ -199,3 +203,4 @@ For questions about the portfolio or the code:
 ---
 
 **Made with ❤️ by Ashish Gupta**
+
