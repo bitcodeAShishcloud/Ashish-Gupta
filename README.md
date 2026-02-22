@@ -3,13 +3,15 @@
   
 # Portfolio - Ashish Gupta
 
-A modern, interactive portfolio website featuring an intelligent chatbot with score-based answer matching and dynamic responses.
+A modern, interactive portfolio website featuring an intelligent chatbot\n with score-based answer matching and dynamic responses.
 
   
 [🌐 Live Portfolio](https://bitcodeashishcloud.github.io/Ashish-Gupta/) • [📧 Contact](mailto:agupta38160@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/ashish-gupta-037973259/) • [📄 Resume](https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing)
 
 
 </div>
+
+-----
 
 ## 🌟 Features
 
@@ -208,6 +210,7 @@ For questions about the portfolio or the code:
 ---
 
 **Made with ❤️ by Ashish Gupta**
+
 
 
 
