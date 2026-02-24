@@ -555,16 +555,7 @@ const profileData = {
       keywords: ["resume", "cv", "resume download", "download resume"],
       answers: [
         "<strong>📄 My Resume</strong><br>Here's my complete professional resume with detailed information about my education, experience, projects, skills, and certifications.<br><br><a href='https://docs.google.com/document/d/1CyutTZwx5yiNymublFrvZl83Phl_J_4V5uztn3OJZJ0/edit?usp=sharing' target='_blank' style='display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: #f0f0f0; border-radius: 6px; text-decoration: none; color: #333; font-weight: 500; border: 1px solid #ddd;'><svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg> View Resume</a><br><br><strong>Key Highlights:</strong><br>• B.Tech CSE (Cyber Security) | NIET Greater Noida<br>• AIG Shields Up Cybersecurity Job Simulation<br>• Poppit AI - Full-Stack AI Application<br>• Certifications: Google Networking, TryHackMe Advent of Cyber<br>• Skills: Web App Security, Network Defense, Python, FastAPI, Hugging Face",
-        "Complete resume covering all my professional milestones, achievements, and technical expertise in one document.",
-        "Resume updated with latest projects and certifications—always ready to share with recruiters and collaborators.",
-        "Everything about my professional journey: education, experience, projects, skills, and achievements in one place.",
-        "Professional document highlighting: NIET studies, Poppit AI development, AIG simulation, Google certification.",
-        "My CV tells the story—from student to builder to security professional. All verifiable, all recent.",
-        "Formatted professionally with education, experience, projects, certifications, and technical capabilities clearly outlined.",
-        "One document that summarizes: 4-year degree, enterprise simulation experience, 100+ GitHub commits, 3+ certifications.",
-        "Resume showcasing the hybrid skill set—cybersecurity fundamentals combined with modern AI engineering capabilities.",
-        "Complete career documentation with emphasis on real-world project experience and hands-on learning achievements.",
-        "Ready-to-share professional resume emphasizing: full-stack development, security expertise, and continuous learning."
+    
       ]
     },
     {
@@ -668,4 +659,5 @@ const profileData = {
       ]
     }
   ]
+
 };
